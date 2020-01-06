@@ -24,7 +24,11 @@
 
 ## ✨ About
 
-This is a template with working config to get a **Gatsby** + **TypeScript** + **Emotion** project (with React Intl + SVGR + Jest) working with **Storybook**.
+This repo is a starter to get a **Gatsby** + **TypeScript** + **Emotion** project (with React Intl + SVGR + Jest) working with **Storybook**.
+
+You can use this starter as a launch point or reference the `gatsby-config.js` and `/.storybook/webpack.config.js` config to see how to get the libraries working with Storybook.
+
+### Integrated Libraries
 
 - [React.js](https://reactjs.org/)
 - [Gatsby.js](https://www.gatsbyjs.org/)
@@ -34,23 +38,23 @@ This is a template with working config to get a **Gatsby** + **TypeScript** + **
 - [gatsby-plugin-svgr](https://github.com/zabute/gatsby-plugin-svgr/)
 - [Jest](https://jestjs.io/)
 
-## 🚀 Quick start
+## 🚀 Quickstart
 
 There are few dependencies to install on your local machine to begin.
 
 1. **Install Node**
 
-   Install node. Using [Node Version Manager](https://github.com/nvm-sh/nvm) is recommended.
+   Install node. Using [Node Version Manager](https://github.com/nvm-sh/nvm) and Node.js [version >= 8.2.1](https://nodejs.org/en/download/releases/) is recommended (so that [npx](https://www.npmjs.com/package/npx) comes bundled).
 
-   After Node is set up locally, checkout the repo to your local machine and install the rest of the project dependencies by running:
+   After Node is set up locally, check out the repo to your local machine and install the rest of the project dependencies by running:
 
 2. **Create a Gatsby Site**
 
+   Use the Gatsby CLI to create a new site, specifying this starter.
+
    ```sh
-   # clone the starter
-   git clone https://github.com/duncanleung/gatsby-typescript-emotion-storybook
-   # install deps
-   yarn
+   # create a new Gatsby site using the blog starter
+   npx gatsby new gatsby-typescript-emotion-storybook https://github.com/duncanleung/gatsby-typescript-emotion-storybook
    ```
 
 3. **Local Development**
@@ -58,12 +62,20 @@ There are few dependencies to install on your local machine to begin.
    Navigate into your new site’s directory and start the dev server and start developing locally, run:
 
    ```sh
+   cd gatsby-typescript-emotion-storybook
+
    yarn dev
    ```
 
+   Your site is now running at `http://localhost:8000`!
+
+   Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
+
+   Open the gatsby-typescript-emotion-storybook directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real-time!
+
    **Environment Variables**
 
-   Environment variables can be used to control various features or configuration. These environment variables are accessed at build time.
+   Environment variables can be used to control various features or configurations. These environment variables are accessed at build time.
 
    Locally, [dotenv](https://www.npmjs.com/package/dotenv) allows storing env vars in a `.env` file.
 
@@ -75,7 +87,7 @@ There are few dependencies to install on your local machine to begin.
 
    Types for this project are declared in `/src/@types`.
 
-   Configuration is located in the `tsconfig.json` file in the root.
+   The config is located in the `tsconfig.json` file in the root.
 
 4. **Open the source code and start editing!**
 
@@ -83,19 +95,20 @@ There are few dependencies to install on your local machine to begin.
 
    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-   Open the `gatsby-starter-typescript-storybook` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
+   Open the `gatsby-starter-typescript-storybook` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real-time!
 
 5. **Run Storybook**
 
-   [Storybook](https://storybook.js.org) allows for Component Driven Development.Start up the storybook runtime by running this script:
+   [Storybook](https://storybook.js.org) allows for Component Driven Development. Start up the storybook runtime by running this script:
 
-   Start running Storybook's local development enviroment.
+   Start running Storybook's local development environment.
 
    ```bash
    yarn storybook
    ```
 
 5)  **Run Tests**
+
     Jest and React Testing Libary provide test running and rendering.
 
     Start running Jest
@@ -168,3 +181,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## 💫 Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/duncanleung/gatsby-typescript-emotion-storybook)
