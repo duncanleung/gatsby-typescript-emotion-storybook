@@ -42,7 +42,7 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
     "@reach/router": "^1.2.1",
-    "@svgr/webpack": "^4.3.3",
+    "@svgr/webpack": "^5.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.19",
