@@ -22,6 +22,8 @@
   </div>
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e97163d4-66e5-4abb-b6a9-27c4a278c7c2/deploy-status)](https://app.netlify.com/sites/gatsby-typescript-emotion-storybook/deploys) ![Dependabot](https://flat.badgen.net/dependabot/duncanleung/gatsby-typescript-emotion-storybook?icon=dependabot)
+
 ## ✨ About
 
 This repo is a starter to get a **Gatsby** + **TypeScript** + **Emotion** project (with React Intl + SVGR + Jest) working with **Storybook**.
