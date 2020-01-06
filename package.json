@@ -1,15 +1,15 @@
 {
-  "name": "gatsby-storybook-typescript-emotion-react-intl-svgr-jest-starter",
+  "name": "gatsby-typescript-emotion-storybook-starter",
   "author": "Duncan Leung <leungd@gmail.com> (https://www.duncanleung.com)",
-  "description": "Gatsby + Storybook + TypeScript + Emotion + React Intl + SVGR + Jest - Starter",
+  "description": "Gatsby + TypeScript + Emotion + Storybook + React Intl + SVGR + Jest - Starter",
   "version": "1.0.0",
   "homepage": "https://github.com/duncanleung/gatsby-storybook-typescript-emotion-react-intl-svgr",
   "bugs": "https://github.com/duncanleung/gatsby-storybook-typescript-emotion-react-intl-svgr",
   "keywords": [
     "gatsby",
-    "storybook",
     "typescript",
     "emotion",
+    "storybook",
     "react-intl",
     "svgr",
     "jest"
