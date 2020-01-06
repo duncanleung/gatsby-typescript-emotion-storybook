@@ -113,7 +113,7 @@
     "ts-essentials": "^3.0.5",
     "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {
