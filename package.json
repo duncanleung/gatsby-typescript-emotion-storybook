@@ -43,7 +43,7 @@
     "@emotion/styled": "^10.0.22",
     "@reach/router": "^1.2.1",
     "@svgr/webpack": "^5.0.1",
-    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.19",
     "gatsby": "^2.18.8",
