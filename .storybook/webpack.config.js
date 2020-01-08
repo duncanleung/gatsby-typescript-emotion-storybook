@@ -54,7 +54,6 @@ module.exports = ({ config }) => {
 
   // Add SVGR Loader
   // ========================================================
-  // Remove svg rules from existing webpack rule
   const assetRule = config.module.rules.find(({ test }) => test.test('.svg'));
 
   const assetLoader = {
@@ -62,6 +61,7 @@ module.exports = ({ config }) => {
     options: assetRule.options || assetRule.query,
   };
 
+  // Merge our loader rule with existing assetLoader rules
   config.module.rules.unshift({
     test: /\.svg$/,
     use: ['@svgr/webpack', assetLoader],
