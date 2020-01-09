@@ -85,7 +85,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-emotion": "^10.0.23",
     "babel-plugin-jsx-remove-data-test-id": "^2.1.3",
-    "babel-plugin-remove-graphql-queries": "^2.7.17",
+    "babel-plugin-remove-graphql-queries": "^2.7.21",
     "babel-preset-gatsby": "^0.2.26",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
