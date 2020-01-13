@@ -4188,10 +4188,10 @@ babel-plugin-react-docgen@^3.0.0:
     react-docgen "^4.1.0"
     recast "^0.14.7"
 
-babel-plugin-remove-graphql-queries@^2.7.17, babel-plugin-remove-graphql-queries@^2.7.19:
-  version "2.7.19"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.19.tgz#063b369cbf0123cbcebeffb75eab465d8f0b16c8"
-  integrity sha512-/DS620ztyyrqrqjmz/KHDt++ktn+4RdvfDf5KCUmt6iJOglgNm7uHkE+snuvvL/xhNNuuPBLErc23Q0cR6MSiQ==
+babel-plugin-remove-graphql-queries@^2.7.17, babel-plugin-remove-graphql-queries@^2.7.19, babel-plugin-remove-graphql-queries@^2.7.21:
+  version "2.7.21"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.21.tgz#6455950b39cf86f9b18ab00d90aab1564ff1379b"
+  integrity sha512-tEHjWeKLb9dLfGqFNDKD79lWSonNzN0wiBiD/ANRmwsiPy+Tc+6c5/QIi1XkScCnohTGEAIPin0QWum5Xa2Nyg==
 
 babel-plugin-syntax-jsx@^6.18.0:
   version "6.18.0"
