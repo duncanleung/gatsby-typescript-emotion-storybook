@@ -40,7 +40,7 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.22",
     "@emotion/core": "^10.0.27",
-    "@emotion/styled": "^10.0.22",
+    "@emotion/styled": "^10.0.27",
     "@reach/router": "^1.2.1",
     "@svgr/webpack": "^5.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
