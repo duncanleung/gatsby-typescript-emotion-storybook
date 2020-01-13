@@ -100,7 +100,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.8",
-    "husky": "^4.0.1",
+    "husky": "^4.0.7",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-emotion": "^10.0.26",
