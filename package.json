@@ -56,7 +56,7 @@
     "gatsby-plugin-sharp": "^2.3.12",
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-plugin-typescript": "^2.1.23",
-    "gatsby-transformer-sharp": "^2.3.9",
+    "gatsby-transformer-sharp": "^2.3.14",
     "polished": "^3.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
