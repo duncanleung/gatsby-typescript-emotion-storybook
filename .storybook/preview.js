@@ -29,6 +29,7 @@ window.___navigate = pathname => {
 
 // Storybook Addons
 // ============================================
+// TODO: Add our breakpoints to the list of viewport options
 addParameters({
   viewport: {
     viewports: INITIAL_VIEWPORTS,
@@ -82,7 +83,3 @@ addLocaleData(esLocaleData);
 addDecorator(GatsbyIntlProvider);
 // Adds react-intl
 addDecorator(withIntl);
-
-// Import all files ending in *.stories.js
-// ============================================
-configure(require.context('../src', true, /\.stories\.tsx$/), module);

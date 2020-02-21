@@ -1,7 +1,7 @@
 import React from 'react';
 import { IntlContextProvider } from 'gatsby-plugin-intl/intl-context';
 
-import { locales, messages } from '../config';
+import { locales, messages } from '../preview';
 
 const intlConfig = {
   language: 'en-us',
