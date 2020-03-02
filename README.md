@@ -40,6 +40,15 @@ You can use this starter as a launch point or reference the `gatsby-config.js` a
 - [gatsby-plugin-svgr](https://github.com/zabute/gatsby-plugin-svgr/)
 - [Jest](https://jestjs.io/)
 
+## 📖 Related Reading
+
+I wrote some blog posts that document my learnings from setting up this starter.
+
+- [TypeScript Module Declaration for SVG Assets](https://duncanleung.com/typescript-module-declearation-svg-img-assets/)
+- [Use Emotion CSS Prop in Storybook](https://duncanleung.com/emotion-css-prop-jsx-pragma-storybook/)
+- [Import SVG Components in Storybook](https://duncanleung.com/import-svg-storybook-webpack-loader/)
+- [How to Setup ESLint .eslintrc Config](https://duncanleung.com/how-to-setup-eslint-eslintrc-config-difference-eslint-config-plugin/)
+
 ## 🚀 Quickstart
 
 There are few dependencies to install on your local machine to begin.
