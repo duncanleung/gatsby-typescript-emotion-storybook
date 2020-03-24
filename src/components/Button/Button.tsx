@@ -1,23 +1,25 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Theme } from '@theme/styled';
 import { rem } from 'polished';
-import { GatsbyLinkProps } from 'gatsby';
 import { Link } from 'gatsby-plugin-intl';
 
 import { LoadingSpinner } from '~/components/LoadingIndicators';
 
 import { above, spacer } from '~/utils/styles';
-import { PartialBy } from '~/@types';
+import { GetRenderComponentProps } from '~/utils/types';
 
 type Color = 'primary' | 'secondary';
 type Variant = 'default' | 'outline';
 export type Size = 'large' | 'medium' | 'small';
 
-type Props = {
+type RenderComponent = React.ComponentType | typeof Link | 'a';
+
+type Props<E extends RenderComponent> = {
+  as?: E;
   name?: string;
-  tag?: 'button' | 'a' | 'link';
   size?: Size;
   color?: Color;
   variant?: Variant;
@@ -25,7 +27,8 @@ type Props = {
   disabled?: boolean;
   /* Strips button styles for a button that looks like a regular anchor tag */
   stripButtonStyles?: boolean;
-};
+} & React.ComponentProps<'button'> &
+  GetRenderComponentProps<E>;
 
 // These colors are not part of the design system color palette (defined in the Theme)
 const interactionColors = {
@@ -151,13 +154,10 @@ const stripStyles = css`
   outline: inherit;
 `;
 
-type GatsbyLinkPropsPartial = PartialBy<
-  Omit<GatsbyLinkProps<object>, 'ref'>,
-  'to'
->;
+const StyledButton = styled.button``;
 
-const Button: React.FC<GatsbyLinkPropsPartial & Props> = ({
-  tag = 'button',
+const Button = <T extends RenderComponent>({
+  as,
   size = 'medium',
   color = 'primary',
   variant = 'default',
@@ -165,7 +165,7 @@ const Button: React.FC<GatsbyLinkPropsPartial & Props> = ({
   stripButtonStyles = false,
   children,
   ...props
-}) => {
+}: Props<T>): ReturnType<React.FC<Props<T>>> => {
   const buttonProps = {
     css: (theme: Theme) =>
       !stripButtonStyles
@@ -174,31 +174,11 @@ const Button: React.FC<GatsbyLinkPropsPartial & Props> = ({
     ...props,
   };
 
-  if (tag === 'link') {
-    const { to } = buttonProps;
-
-    if (!to) {
-      /* eslint-disable-next-line no-console */
-      console.log("Using Button with `tag='link'` requires a `to` prop.");
-    }
-
-    return (
-      <Link to={to || ''} {...buttonProps}>
-        {children}
-      </Link>
-    );
-  }
-
-  if (tag === 'a') {
-    return <a {...buttonProps}>{children}</a>;
-  }
-
   return (
-    // eslint-disable-next-line react/button-has-type
-    <button {...buttonProps}>
+    <StyledButton {...buttonProps}>
       {children}
       {isLoading && <LoadingSpinner css={loadingStyles} />}
-    </button>
+    </StyledButton>
   );
 };
 
