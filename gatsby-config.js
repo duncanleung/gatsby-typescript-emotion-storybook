@@ -24,15 +24,10 @@ const plugins = [
     },
   },
   {
-    resolve: 'gatsby-plugin-prefetch-google-fonts',
+    resolve: 'gatsby-plugin-google-fonts',
     options: {
-      fonts: [
-        {
-          family: 'Lora',
-          subsets: ['latin'],
-          variants: ['400', '700'],
-        },
-      ],
+      fonts: [`Lora:400,700`],
+      display: 'swap',
     },
   },
 ];
