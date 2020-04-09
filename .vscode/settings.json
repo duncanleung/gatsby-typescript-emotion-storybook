@@ -1,0 +1,62 @@
+{
+  "window.zoomLevel": 0,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
+  "editor.formatOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.showSnippets": true,
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.tabSize": 2
+  },
+  "editor.minimap.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.editor.labelFormat": "short",
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "breadcrumbs.enabled": true,
+  "files.trimTrailingWhitespace": true,
+  "typescript.surveys.enabled": false,
+  "sync.gist": "1e9dd01994f78489306fbfd6f7b01cd3",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "terminal.integrated.rendererType": "dom",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto"
+}
