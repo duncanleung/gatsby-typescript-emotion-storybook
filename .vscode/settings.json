@@ -5,6 +5,7 @@
   "editor.formatOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "browser-preview.startUrl": "http://localhost:8000/",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
