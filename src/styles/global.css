@@ -1,23 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@font-face {
+  font-family: "Levvic Bold";
+  src: url("../fonts/Livvic-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Levvic SemiBold";
+  src: url("../fonts/Livvic-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Levvic Regular";
+  src: url("../fonts/Livvic-Regular.ttf");
+}
 
 html,
 body {
   min-height: 100vh;
   font-size: 18px;
-  font-family: "Public Sans", sans-serif;
-
-  --dark-blue: hsl(233, 26%, 24%);
-  --lime-green: hsl(136, 65%, 51%);
-  --bright-cyan: hsl(192, 70%, 51%);
-
-  --grayish-blue: hsl(233, 8%, 62%);
-  --light-grayish-blue: hsl(220, 16%, 96%);
-  --very-light-gray: hsl(0, 0%, 98%);
-  --white: hsl(0, 0%, 100%);
+  font-family: "Levvic SemiBold";
+  line-height: 28px;
 }
 
+p,
+.text-normal,
 button {
-  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  font-family: "Levvic SemiBold";
+  line-height: 28px;
+}
+
+.text-small {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.text-smallest {
+  font-size: 10px;
+  line-height: 13px;
+  font-style: italic;
+}
+
+.h1-large,
+.h1-small,
+.h2,
+.h3 {
+  font-family: "Levvic Bold";
+  font-weight: 700;
+}
+
+.h1-large {
+  font-size: 100px;
+  line-height: 100px;
+}
+.h1-small {
+  font-size: 64px;
+  line-height: 56px;
+}
+
+.h2 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.h3 {
+  font-size: 18px;
+  line-height: 28px;
 }
 
 * {
