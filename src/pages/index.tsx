@@ -6,7 +6,14 @@ export const Index = () => {
   return (
     <div>
       <SEO />
-      <h1>Hello, World</h1>
+      <h1
+        style={{
+          background: "black",
+          color: "white",
+        }}
+      >
+        Hello, World
+      </h1>
       <Dump>{{ hello: "world" }}</Dump>
     </div>
   );
