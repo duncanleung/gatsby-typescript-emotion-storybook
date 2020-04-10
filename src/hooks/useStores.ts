@@ -1,5 +1,5 @@
 import React from "react";
-import { RootStoreContext } from "../contexts/RootStoreContext";
+import { RootStoreContext } from "../providers";
 
 export default () => {
   const stores = React.useContext(RootStoreContext);

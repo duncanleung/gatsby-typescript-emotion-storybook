@@ -62,3 +62,18 @@ export const PrimaryButton: React.FC = ({ children }) => {
     </Button>
   );
 };
+
+export const PrimaryButtonDark: React.FC = ({ children }) => {
+  let theme = useTheme<typeof Theme>();
+
+  return (
+    <Button
+      backgroundColor={theme.colors.white}
+      color={theme.colors.sacramentoGreen}
+      hoverBackgroundColor={theme.colors.sacramentoGreen}
+      hoverColor={theme.colors.white}
+    >
+      {children}
+    </Button>
+  );
+};

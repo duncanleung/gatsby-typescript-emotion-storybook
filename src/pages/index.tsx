@@ -1,6 +1,6 @@
 import React from "react";
 import SEO from "../components/Seo";
-import { PrimaryButton } from "../components/Button";
+import { PrimaryButton, PrimaryButtonDark } from "../components/Button";
 import { useTheme } from "emotion-theming";
 import { css } from "@emotion/core";
 import Theme from "../styles/theme";
@@ -10,14 +10,33 @@ export const Index = () => {
   return (
     <div
       css={css`
-        background: ${theme.colors.darkGreen};
+        display: flex;
+        height: 100vh;
+        > * {
+          flex: 1;
+          padding: 20px;
+        }
       `}
     >
-      <SEO />
-      <h1 className="h1-large">Quick waltz</h1>
+      <div
+        css={css`
+          background: ${theme.colors.darkGreen};
+        `}
+      >
+        <SEO />
+        <h1 className="h1-large">Quick waltz</h1>
 
-      <h1 className="h1-small">Let&apos;s get started</h1>
-      <PrimaryButton>contact us</PrimaryButton>
+        <h1 className="h1-small">Let&apos;s get started</h1>
+        <PrimaryButton>contact us</PrimaryButton>
+      </div>
+
+      <div
+        css={css`
+          background: ${theme.colors.white};
+        `}
+      >
+        <PrimaryButtonDark>contact us</PrimaryButtonDark>
+      </div>
     </div>
   );
 };

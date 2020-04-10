@@ -1,6 +1,6 @@
 import { observable, action } from "mobx";
 
-export default class ThemeStore {
+export default class UIStore {
   @observable
   isNavOpen = false;
 
