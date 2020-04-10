@@ -175,7 +175,7 @@ const Button = <T extends RenderComponent>({
   };
 
   return (
-    <StyledButton {...buttonProps}>
+    <StyledButton as={as} {...buttonProps}>
       {children}
       {isLoading && <LoadingSpinner css={loadingStyles} />}
     </StyledButton>
