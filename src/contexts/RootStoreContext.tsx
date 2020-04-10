@@ -1,6 +1,8 @@
 import React from "react";
 import { UIStore } from "../stores";
 import { useLocalStore } from "mobx-react-lite";
+import { ThemeProvider } from "emotion-theming";
+import theme from "../styles/theme";
 
 type Stores = {
   ui: UIStore;
@@ -16,7 +18,7 @@ export const RootStoreProvider = ({ children }: { children: any }) => {
   });
   return (
     <RootStoreContext.Provider value={stores}>
-      {children}
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </RootStoreContext.Provider>
   );
 };
