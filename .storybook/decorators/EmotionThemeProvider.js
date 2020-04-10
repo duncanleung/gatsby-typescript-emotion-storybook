@@ -1,8 +1,8 @@
-import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
-import theme from '~/theme';
+import React from "react";
+import { ThemeProvider } from "emotion-theming";
+import theme from "~/theme";
 
-const EmotionThemeProvider = storyFn => (
+const EmotionThemeProvider = (storyFn) => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
 );
 

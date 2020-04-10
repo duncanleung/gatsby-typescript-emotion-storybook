@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import { configure, addDecorator, addParameters } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { setIntlConfig, withIntl } from 'storybook-addon-intl';
+import { configure, addDecorator, addParameters } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { setIntlConfig, withIntl } from "storybook-addon-intl";
 
-import { addLocaleData } from 'gatsby-plugin-intl';
-import enLocaleData from 'react-intl/locale-data/en';
-import esLocaleData from 'react-intl/locale-data/es';
+import { addLocaleData } from "gatsby-plugin-intl";
+import enLocaleData from "react-intl/locale-data/en";
+import esLocaleData from "react-intl/locale-data/es";
 
-import { EmotionThemeProvider, GatsbyIntlProvider } from './decorators';
-import GlobalStyles from '../src/components/Layout/GlobalStyles';
+import { EmotionThemeProvider, GatsbyIntlProvider } from "./decorators";
+import GlobalStyles from "../src/components/Layout/GlobalStyles";
 
 // Gatsby Setup
 // ============================================
@@ -21,10 +21,10 @@ global.___loader = {
   hovering: () => {},
 };
 // Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
-global.__PATH_PREFIX__ = '';
+global.__PATH_PREFIX__ = "";
 // This is to utilized to override the window.___navigate method Gatsby defines and uses to report what path a Link would be taking us to if it wasn't inside a storybook
-window.___navigate = pathname => {
-  action('NavigateTo:')(pathname);
+window.___navigate = (pathname) => {
+  action("NavigateTo:")(pathname);
 };
 
 // Storybook Addons
@@ -33,20 +33,20 @@ window.___navigate = pathname => {
 addParameters({
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-    defaultViewport: 'responsive',
+    defaultViewport: "responsive",
   },
   options: {
-    panelPosition: 'right',
+    panelPosition: "right",
   },
 });
 
 // Storybook Decorators
 // ============================================
 // Global Styles ==============================
-addDecorator(story => (
+addDecorator((story) => (
   <>
     <GlobalStyles />
-    <div style={{ padding: '3rem' }}>{story()}</div>
+    <div style={{ padding: "3rem" }}>{story()}</div>
   </>
 ));
 
@@ -55,7 +55,7 @@ addDecorator(EmotionThemeProvider);
 
 // gatsby-plugin-intl Provider ================
 // Set supported locales
-export const locales = ['en-us', 'es-es'];
+export const locales = ["en-us", "es-es"];
 
 // Import translation messages
 export const messages = locales.reduce((acc, locale) => {
@@ -65,12 +65,12 @@ export const messages = locales.reduce((acc, locale) => {
   };
 }, {});
 
-const getMessages = locale => messages[locale];
+const getMessages = (locale) => messages[locale];
 
 // Set `storybook-addon-intl` configuration (handles `react-intl`)
 setIntlConfig({
   locales,
-  defaultLocale: 'en-us',
+  defaultLocale: "en-us",
   getMessages,
 });
 
