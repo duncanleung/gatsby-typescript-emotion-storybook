@@ -1,0 +1,35 @@
+{
+  "env": {
+    "production": {
+      "plugins": ["babel-plugin-jsx-remove-data-test-id"]
+    },
+    // Jest needs @emotion/babel-preset-css-prop
+    // Gatsby enables css-prop with gatsby-plugin-emotion
+    // Storybook enables css-prop in /.storybook/webpack.config.js
+    "test": {
+      "presets": ["@emotion/babel-preset-css-prop"]
+    }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "~": "./src",
+          "@theme/styled": "./src/styled"
+        }
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
+      }
+    ]
+  ]
+}

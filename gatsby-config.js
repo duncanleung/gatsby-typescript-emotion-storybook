@@ -1,73 +1,42 @@
-require("dotenv").config();
-const path = require("path");
+require("dotenv").config({
+  path: ".env",
+});
 
-const basePlugins = [
-  `gatsby-plugin-typescript`,
-  `gatsby-plugin-emotion`,
+const supportedLanguages = require("./src/utils/i18n/supportedLanguages");
+
+const languages = supportedLanguages.map((language) => language.languageTag);
+
+const plugins = [
+  "gatsby-plugin-react-helmet",
+  "gatsby-transformer-sharp",
+  "gatsby-plugin-sharp",
+  "gatsby-plugin-typescript",
+  "gatsby-plugin-emotion",
+  "gatsby-plugin-remove-serviceworker",
+  "gatsby-plugin-svgr",
   {
-    resolve: `gatsby-source-filesystem`,
+    resolve: "gatsby-plugin-intl",
     options: {
-      name: `images`,
-      path: path.join(__dirname, `src`, `images`),
+      path: `${__dirname}/src/locales`,
+      languages,
+      defaultLanguage: "en-us",
+      redirect: true,
     },
   },
-  `gatsby-transformer-sharp`,
-  `gatsby-plugin-sharp`,
-  `gatsby-plugin-react-helmet-async`,
-  // `gatsby-plugin-react-axe`,
   {
-    resolve: `gatsby-plugin-intl`,
+    resolve: "gatsby-plugin-google-fonts",
     options: {
-      // language JSON resource path
-      path: `${__dirname}/src/intl`,
-      // supported language
-      languages: [`en`],
-      // language file path
-      defaultLanguage: `en`,
-      // option to redirect to `/ko` when connecting `/`
-      // redirect: true,
+      fonts: [`Lora:400,700`],
+      display: "swap",
     },
   },
 ];
 
-let productionPlugins = [];
-
-if (process.env.NODE_ENV == "production") {
-  console.log("Adding production plugins");
-  productionPlugins = [
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
-      options: {
-        siteUrl: `https://easybank-codewaseem.netlify.com`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-offline`,
-  ];
+// Bundle analyzer, dev only
+if (process.env.ENABLE_BUNDLE_ANALYZER === "1") {
+  plugins.push("gatsby-plugin-webpack-bundle-analyser-v2");
 }
 
 module.exports = {
-  siteMetadata: {
-    title: "EasyBank",
-    description:
-      "Next generation digital banking, Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.",
-    keywords:
-      "Gatsby, Frontend, Fullstack, HTML5, CSS3, JavaScript, React, Waseem Ahmed",
-    siteUrl: "https://easybank-codewaseem.netlify.com",
-    lang: "en",
-  },
-  plugins: [...basePlugins, ...productionPlugins],
+  plugins,
 };

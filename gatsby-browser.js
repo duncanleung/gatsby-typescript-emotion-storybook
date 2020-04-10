@@ -1,12 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react";
 
-// You can delete this file if you're not using it
+import { App } from "./src/components/App";
 
-import "./src/styles/global.css";
-
-import wrapWithProvider from "./rootWrapper";
-export const wrapRootElement = wrapWithProvider;
+// Duplicated in gatsby-ssr.js for server side rendering during the build
+export const wrapRootElement = (props) => <App {...props} />;

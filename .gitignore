@@ -51,8 +51,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variable files
+# dotenv environment variables file
 .env*
+!.env.sample
 
 # gatsby files
 .cache/
@@ -68,6 +69,8 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-/.expo
+# Storybook
+.out
 
-/web-build
+# Ensure automated processes do not mix package manager artifacts
+package-lock.json
