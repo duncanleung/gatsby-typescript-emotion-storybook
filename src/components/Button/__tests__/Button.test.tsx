@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'test-utils';
 import { rem } from 'polished';
+import { Link } from 'gatsby-plugin-intl';
 import theme from '~/theme';
 
 import Button from '../Button';
@@ -83,7 +84,7 @@ describe('<Button />', () => {
 
   test('should render as anchor tag if type is "link"', () => {
     const { container } = render(
-      <Button tag="link" css="mock-styles-string" to="/browse-all/">
+      <Button as={Link} css="mock-styles-string" to="/browse-all/">
         Click Me
       </Button>
     );
@@ -95,7 +96,7 @@ describe('<Button />', () => {
 
   test('should render as anchor tag if type is "a"', () => {
     const { container } = render(
-      <Button tag="a" css="mock-styles-string" to="/browse-all/">
+      <Button as="a" css="mock-styles-string" href="/browse-all/">
         Click Me
       </Button>
     );
