@@ -46,7 +46,7 @@ addParameters({
 addDecorator((story) => (
   <>
     <GlobalStyles />
-    <div style={{ padding: "3rem" }}>{story()}</div>
+    <div style={{ padding: "0" }}>{story()}</div>
   </>
 ));
 
