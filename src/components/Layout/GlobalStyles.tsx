@@ -1,21 +1,34 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
-import { normalize, rem } from "polished";
+import { normalize } from "polished";
 
-import { above, spacer } from "~/utils/styles";
+// import { above, spacer } from "~/utils/styles";
 
 const GlobalStyles: React.FC = () => {
   return (
     <Global
       styles={(theme) => css`
         ${normalize()}
+        @font-face {
+          font-family: "Levvic Bold";
+          src: url("./fonts/Livvic-Bold.ttf") format("truetype");
+        }
+
+        @font-face {
+          font-family: "Levvic SemiBold";
+          src: url("./fonts/Livvic-SemiBold.ttf") format("truetype");
+        }
+
+        @font-face {
+          font-family: "Levvic Regular";
+          src: url("./fonts/Livvic-Regular.ttf") format("truetype");
+        }
 
         html,
-          body {
-          font-family: "neue-haas-unica", serif;
-          font-weight: 400;
-          color: ${theme.color.text.body};
-          line-height: 1.5;
+        body {
+          font-family: "Levvic SemiBold", serif;
+          font-weight: 600;
+          line-height: 25px;
           box-sizing: border-box;
         }
 
@@ -32,40 +45,33 @@ const GlobalStyles: React.FC = () => {
         h4,
         h5,
         h6 {
-          font-family: "Lora", serif;
-          font-weight: 600;
-          line-height: 1.3;
-          color: ${theme.color.text.heading};
-          margin-top: 0;
-          margin-bottom: ${theme.spacing.unit * 3}px;
+          font-family: "Levvic Bold", serif;
+          font-weight: 700;
+          margin: 0;
         }
 
-        a {
-          color: ${theme.color.secondary};
-          text-decoration: none;
+        h1 {
+          font-size: 100px;
+          line-height: 100px;
+        }
+        h2 {
+          font-size: 64px;
+          line-height: 56px;
         }
 
-        p {
-          margin-bottom: ${spacer(2.5)}px;
+        h3 {
+          font-size: 48px;
+          line-height: 48px;
+        }
 
-          ${above(
-            "md",
-            css`
-              font-size: ${rem("18px")};
-            `
-          )};
+        h4 {
+          font-size: 18px;
+          line-height: 28px;
         }
 
         img {
           max-width: 100%;
           margin-bottom: ${theme.spacing.unit * 3}px;
-        }
-
-        button {
-          color: ${theme.color.secondary};
-          font-weight: 500;
-          background: none;
-          border: 0;
         }
       `}
     />

@@ -20,7 +20,7 @@ const plugins = [
       path: `${__dirname}/src/locales`,
       languages,
       defaultLanguage: "en-us",
-      redirect: true,
+      redirect: false,
     },
   },
   {
