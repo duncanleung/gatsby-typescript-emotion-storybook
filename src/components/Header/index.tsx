@@ -109,7 +109,7 @@ const Navigation = () => {
           <li>home</li>
           <li>about</li>
           <li>
-            <Button color="secondary">contact us</Button>
+            <Button>contact us</Button>
           </li>
         </ul>
       </StyledNav>

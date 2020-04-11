@@ -39,6 +39,7 @@ const createStyles = (
     font-weight: 600;
     border: 2px solid ${theme.color.primary.light};
     border-radius: ${theme.shape.borderRadius.button}px;
+    background-color: transparent;
 
     cursor: pointer;
     &:disabled {
@@ -49,10 +50,8 @@ const createStyles = (
     ${color === "primary" && variant === "light"
       ? css`
           color: ${theme.color.text.light};
-          background-color: ${theme.color.secondary.darker};
         `
       : css`
-          background-color: ${theme.color.primary.light};
           color: ${theme.color.secondary.darker};
           border-color: ${theme.color.secondary.darker};
         `}
