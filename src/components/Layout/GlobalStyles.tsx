@@ -1,7 +1,8 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
 import { normalize } from "polished";
-
+import livvicBold from "~/fonts/Livvic-Bold.ttf";
+import livvicSemiBold from "~/fonts/Livvic-SemiBold.ttf";
 // import { above, spacer } from "~/utils/styles";
 
 const GlobalStyles: React.FC = () => {
@@ -11,17 +12,12 @@ const GlobalStyles: React.FC = () => {
         ${normalize()}
         @font-face {
           font-family: "Levvic Bold";
-          src: url("./fonts/Livvic-Bold.ttf") format("truetype");
+          src: url(${livvicBold}) format("truetype");
         }
 
         @font-face {
           font-family: "Levvic SemiBold";
-          src: url("./fonts/Livvic-SemiBold.ttf") format("truetype");
-        }
-
-        @font-face {
-          font-family: "Levvic Regular";
-          src: url("./fonts/Livvic-Regular.ttf") format("truetype");
+          src: url(${livvicSemiBold}) format("truetype");
         }
 
         html,
