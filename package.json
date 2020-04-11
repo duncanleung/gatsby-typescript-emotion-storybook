@@ -37,7 +37,7 @@
     "test:coverage": "yarn test --coverage",
     "test:watch": "jest --watch",
     "format": "yarn lint:js --fix && yarn lint:ts --fix",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook  -p 9001",
     "storybook:build": "build-storybook -c .storybook -o .out"
   },
   "dependencies": {

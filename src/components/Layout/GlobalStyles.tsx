@@ -1,8 +1,8 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
 import { normalize } from "polished";
-import livvicBold from "~/fonts/Livvic-Bold.ttf";
-import livvicSemiBold from "~/fonts/Livvic-SemiBold.ttf";
+import livvicBold from "~/assets/fonts/Livvic-Bold.ttf";
+import livvicSemiBold from "~/assets/fonts/Livvic-SemiBold.ttf";
 // import { above, spacer } from "~/utils/styles";
 
 const GlobalStyles: React.FC = () => {

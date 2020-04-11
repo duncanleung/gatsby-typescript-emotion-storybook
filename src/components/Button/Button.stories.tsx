@@ -2,7 +2,6 @@ import React from "react";
 import { FormattedMessage } from "gatsby-plugin-intl";
 import { css } from "@emotion/core";
 
-import { Theme } from "@theme/styled";
 import Button from "./Button";
 import theme from "~/theme";
 
