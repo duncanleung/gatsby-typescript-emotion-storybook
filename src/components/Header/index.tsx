@@ -28,19 +28,14 @@ const StyledNav = ({
       position: fixed;
       top: 0;
       left: 0;
-      width: 0;
-      height: 0;
-      opacity: 0;
-      z-index: 99;
+      width: 100vw;
+      height: 100vh;
+      z-index: -99;
       background-color: rgba(0, 0, 0, 0.5);
 
       ${isOpen &&
         css`
-          transition: opacity 100ms ease-in;
-
-          width: 100vw;
-          height: 100vh;
-          opacity: 1;
+          z-index: 99;
         `}
 
       ul {
@@ -48,7 +43,7 @@ const StyledNav = ({
         margin: 0;
         right: 0;
         transform: translateX(255px);
-        transition: 100ms ease-in;
+        transition: transform 100ms ease-in;
         background-color: ${theme.color.secondary.light};
         height: 0;
         z-index: 100;
