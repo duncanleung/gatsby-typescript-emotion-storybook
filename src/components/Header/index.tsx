@@ -9,70 +9,90 @@ import { spacer } from "../../utils/styles";
 import { ReactComponent as CloseIcon } from "~/assets/images/icon-close.svg";
 
 // #region styles
-const getHeaderStyles = () => css`
+const headerStyles = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
+const logoStyles = css`
+  display: block;
+  width: 128px;
+  height: 32px;
+`;
+
+const getNavStyles = (theme: Theme) => (isOpen: boolean) => css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  ${isOpen &&
+    css`
+      z-index: 99;
+    `}
+
+  ul {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    transform: translateX(255px);
+    transition: transform 100ms ease-in;
+    background-color: ${theme.color.secondary.light};
+    height: 0;
+    z-index: 100;
+    list-style: none;
+    font-size: ${rem("18px")};
+    line-height: ${rem("28px")};
+    color: ${theme.color.text.light};
+
+    ${isOpen &&
+      css`
+        width: 255px;
+        height: 100%;
+        padding: ${rem("112px")} ${rem("48px")} 0;
+
+        transform: translateX(0);
+      `}
+
+    > li {
+      margin-bottom: ${spacer(3)};
+
+      &:last-child {
+        margin-top: ${rem("36px")};
+      }
+    }
+  }
+
+  .close-button {
+    width: ${spacer(2)};
+    height: ${spacer(2)};
+    position: absolute;
+    z-index: 101;
+    right: ${spacer(3)};
+    top: ${spacer(7)};
+    cursor: pointer;
+  }
+`;
+
 // #endregion
 
-const StyledNav = ({
-  isOpen,
-  children,
-}: React.PropsWithChildren<{
-  isOpen: boolean;
-}>) => (
-  <nav
-    css={(theme: Theme) => css`
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -99;
-      background-color: rgba(0, 0, 0, 0.5);
-
-      ${isOpen &&
-        css`
-          z-index: 99;
-        `}
-
-      ul {
-        position: absolute;
-        margin: 0;
-        right: 0;
-        transform: translateX(255px);
-        transition: transform 100ms ease-in;
-        background-color: ${theme.color.secondary.light};
-        height: 0;
-        z-index: 100;
-        list-style: none;
-        font-size: ${rem("18px")};
-        line-height: ${rem("28px")};
-        color: ${theme.color.text.light};
-
-        ${isOpen &&
-          css`
-            width: 255px;
-            height: 100%;
-            padding: ${rem("112px")} ${rem("48px")} 0;
-
-            transform: translateX(0);
-          `}
-
-        > li {
-          margin-bottom: ${spacer(3)};
-
-          &:last-child {
-            margin-top: ${rem("36px")};
-          }
-        }
-      }
-    `}
+const CloseButton: React.FC<React.HTMLProps<HTMLSpanElement>> = ({
+  onClick,
+  onKeyUp,
+}) => (
+  <span
+    role="button"
+    tabIndex={0}
+    className="close-button"
+    onClick={onClick}
+    onKeyUp={onKeyUp}
   >
-    {children}
-  </nav>
+    <CloseIcon />
+  </span>
 );
 
 const Navigation = () => {
@@ -91,20 +111,13 @@ const Navigation = () => {
           cursor: pointer;
         `}
       />
-      <StyledNav isOpen={isOpen}>
-        <span
-          css={css`
-            width: ${spacer(2)};
-            height: ${spacer(2)};
-            position: absolute;
-            z-index: 101;
-            right: ${spacer(3)};
-            top: ${spacer(7)};
-            cursor: pointer;
-          `}
-        >
-          <CloseIcon onClick={closeNav} />
-        </span>
+      <nav css={(theme: Theme) => getNavStyles(theme)(isOpen)}>
+        <CloseButton
+          onClick={closeNav}
+          onKeyUp={(e) =>
+            (e.charCode === 13 || e.charCode === 27) && closeNav()
+          }
+        />
         <ul>
           <li>home</li>
           <li>about</li>
@@ -112,21 +125,15 @@ const Navigation = () => {
             <Button>contact us</Button>
           </li>
         </ul>
-      </StyledNav>
+      </nav>
     </div>
   );
 };
 
 const Header = () => {
   return (
-    <header css={getHeaderStyles()}>
-      <Logo
-        css={css`
-          display: block;
-          width: 128px;
-          height: 32px;
-        `}
-      />
+    <header css={headerStyles}>
+      <Logo css={logoStyles} />
 
       <Navigation />
     </header>
