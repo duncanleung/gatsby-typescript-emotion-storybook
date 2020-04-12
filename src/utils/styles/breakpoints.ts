@@ -1,5 +1,5 @@
-interface BreakpointsShape {
-  [sm: string]: number;
+export interface BreakpointsShape {
+  sm: number;
   md: number;
   lg: number;
   xl: number;

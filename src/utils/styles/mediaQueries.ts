@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 
 import { css, SerializedStyles } from "@emotion/core";
-import breakpoints from "./breakpoints";
+import breakpoints, { BreakpointsShape } from "./breakpoints";
 
-const getBreakpoint = (key: string) => breakpoints[key];
+const getBreakpoint = (key: keyof BreakpointsShape) => breakpoints[key];
 
 /**
  * @function above
@@ -12,7 +12,10 @@ const getBreakpoint = (key: string) => breakpoints[key];
  *
  * @returns {string} mediaQueryStyles
  */
-export const above = (breakpoint: string, className: SerializedStyles) => css`
+export const above = (
+  breakpoint: keyof BreakpointsShape,
+  className: SerializedStyles
+) => css`
   @media (min-width: ${getBreakpoint(breakpoint)}px) {
     ${className};
   }
