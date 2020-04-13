@@ -32,16 +32,21 @@ export default {
   ],
 };
 
-export const MobileHeaderView = () => <Header />;
-
-MobileHeaderView.story = {
+const mobileViewPort = {
   parameters: {
     viewport: { defaultViewport: "iphone6" },
   },
 };
 
-export const TabletHeaderView = () => <Header />;
-TabletHeaderView.story = {
+export const MobileView = () => <Header />;
+
+MobileView.story = mobileViewPort;
+
+export const MobileNavOpenView = () => <Header isNavOpen />;
+MobileNavOpenView.story = mobileViewPort;
+
+export const TabletView = () => <Header />;
+TabletView.story = {
   parameters: {
     viewport: { defaultViewport: "ipad" },
   },

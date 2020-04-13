@@ -1,4 +1,7 @@
 import React from "react";
+import { css } from "@emotion/core";
+import { Theme } from "@theme/styled";
+import { rem } from "polished";
 import { ReactComponent as Logo } from "~/assets/images/logo.svg";
 import { ReactComponent as Hamburger } from "~/assets/images/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "~/assets/images/icon-close.svg";
@@ -7,7 +10,9 @@ import { spacer, above } from "../../utils/styles";
 
 const Navigation: React.FC<{
   isNavOpen?: boolean;
-}> = ({ isNavOpen }) => {
+  onOpenNav?: () => void;
+  onCloseNav?: () => void;
+}> = ({ isNavOpen = false, onOpenNav = () => {}, onCloseNav = () => {} }) => {
   return (
     <div
       css={css`
@@ -106,6 +111,8 @@ const Navigation: React.FC<{
               `
             )}
           `}
+          onClick={onOpenNav}
+          onTouchEnd={onOpenNav}
         />
       ) : (
         <CloseIcon
@@ -117,13 +124,19 @@ const Navigation: React.FC<{
             right: ${spacer(3)};
             top: ${spacer(7)};
           `}
+          onClick={onCloseNav}
+          onTouchEnd={onCloseNav}
         />
       )}
     </div>
   );
 };
 
-const Header = () => {
+const Header: React.FC<{
+  isNavOpen?: boolean;
+  onOpenNav?: () => void;
+  onCloseNav?: () => void;
+}> = ({ isNavOpen, onOpenNav, onCloseNav }) => {
   return (
     <header
       css={css`
@@ -136,7 +149,11 @@ const Header = () => {
           height: 32px;
         `}
       />
-      <Navigation isNavOpen />
+      <Navigation
+        isNavOpen={isNavOpen}
+        onOpenNav={onOpenNav}
+        onCloseNav={onCloseNav}
+      />
     </header>
   );
 };
