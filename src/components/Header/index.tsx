@@ -2,22 +2,40 @@ import React from "react";
 import { ReactComponent as Logo } from "~/assets/images/logo.svg";
 import { ReactComponent as Hamburger } from "~/assets/images/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "~/assets/images/icon-close.svg";
-import { css } from "@emotion/core";
-import { Theme } from "@theme/styled";
-import { rem } from "polished";
 import { Button } from "../Button";
 import { spacer, above } from "../../utils/styles";
 
-const Navigation = () => {
+const Navigation: React.FC<{
+  isNavOpen?: boolean;
+}> = ({ isNavOpen }) => {
   return (
     <div
       css={css`
         flex: 1;
+        ${isNavOpen &&
+          css`
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            top: 0;
+            right: 0;
+          `}
       `}
     >
       <div
-        css={css`
-          display: none;
+        css={(theme: Theme) => css`
+          display: ${!isNavOpen ? "none" : "block"};
+
+          ${isNavOpen &&
+            css`
+              position: fixed;
+              background: ${theme.color.secondary.light};
+              height: 100%;
+              width: 255px;
+              right: 0;
+              padding: 112px 48px 0;
+            `}
 
           ${above(
             "md",
@@ -41,8 +59,30 @@ const Navigation = () => {
               padding: 0 0 0 48px;
 
               li {
+                cursor: pointer;
                 margin-right: 40px;
               }
+
+              ${isNavOpen &&
+                css`
+                  flex-direction: column;
+                  padding: 0;
+
+                  li {
+                    margin: 0;
+                    margin-bottom: ${spacer(3)};
+
+                    &:last-child {
+                      margin-bottom: 36px;
+                    }
+                  }
+                `}
+              ${above(
+                "lg",
+                css`
+                  padding: 0 0 0 80px;
+                `
+              )}
             `}
           >
             <li>home</li>
@@ -51,20 +91,34 @@ const Navigation = () => {
         </nav>
         <Button>contact us</Button>
       </div>
-      <Hamburger
-        css={css`
-          display: block;
-          margin-left: auto;
-          width: 20px;
+      {!isNavOpen ? (
+        <Hamburger
+          css={css`
+            display: block;
+            margin-left: auto;
+            width: 20px;
+            cursor: pointer;
 
-          ${above(
-            "md",
-            css`
-              display: none;
-            `
-          )}
-        `}
-      />
+            ${above(
+              "md",
+              css`
+                display: none;
+              `
+            )}
+          `}
+        />
+      ) : (
+        <CloseIcon
+          css={css`
+            width: 16px;
+            z-index: 100;
+            cursor: pointer;
+            position: absolute;
+            right: ${spacer(3)};
+            top: ${spacer(7)};
+          `}
+        />
+      )}
     </div>
   );
 };
@@ -82,7 +136,7 @@ const Header = () => {
           height: 32px;
         `}
       />
-      <Navigation />
+      <Navigation isNavOpen />
     </header>
   );
 };
