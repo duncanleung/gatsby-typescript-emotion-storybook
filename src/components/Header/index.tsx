@@ -17,6 +17,8 @@ const Navigation: React.FC<{
     <div
       css={css`
         flex: 1;
+        z-index: 99;
+
         ${isNavOpen &&
           css`
             position: fixed;

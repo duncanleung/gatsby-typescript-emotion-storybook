@@ -3,12 +3,13 @@ import { Global, css } from "@emotion/core";
 import { normalize } from "polished";
 import livvicBold from "~/assets/fonts/Livvic-Bold.ttf";
 import livvicSemiBold from "~/assets/fonts/Livvic-SemiBold.ttf";
+import { Theme } from "../../styled";
 // import { above, spacer } from "~/utils/styles";
 
 const GlobalStyles: React.FC = () => {
   return (
     <Global
-      styles={(theme) => css`
+      styles={(theme: Theme) => css`
         ${normalize()}
         @font-face {
           font-family: "Levvic Bold";
@@ -26,6 +27,8 @@ const GlobalStyles: React.FC = () => {
           font-weight: 600;
           line-height: 25px;
           box-sizing: border-box;
+          color: ${theme.color.text.light};
+          overflow-x: hidden;
         }
 
         *,

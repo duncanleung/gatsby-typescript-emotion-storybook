@@ -2,12 +2,12 @@ import React from "react";
 import { Theme } from "@theme/styled";
 import { css } from "@emotion/core";
 import { above } from "../../utils/styles";
+import BgPatterns from "../BgPatterns";
 
 const Hero: React.FC<{}> = ({ children }) => {
   return (
     <section
       css={(theme: Theme) => css`
-        min-height: 100vh;
         background-color: ${theme.color.primary.dark};
         padding: 48px 24px 0;
 
@@ -27,6 +27,7 @@ const Hero: React.FC<{}> = ({ children }) => {
       `}
     >
       {children}
+      <BgPatterns />
     </section>
   );
 };
