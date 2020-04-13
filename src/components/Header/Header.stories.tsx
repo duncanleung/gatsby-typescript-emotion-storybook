@@ -1,9 +1,5 @@
 import React from "react";
-import styled from "@theme/styled";
 import Header from ".";
-import theme from "../../theme";
-import { above } from "../../utils/styles";
-import { css } from "@emotion/core";
 import Hero from "../Hero";
 
 export default {
