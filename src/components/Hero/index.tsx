@@ -2,7 +2,6 @@ import React from "react";
 import { Theme } from "@theme/styled";
 import { css } from "@emotion/core";
 import { above } from "../../utils/styles";
-import BgPatterns from "../BgPatterns";
 
 const Hero: React.FC<{}> = ({ children }) => {
   return (
@@ -27,7 +26,6 @@ const Hero: React.FC<{}> = ({ children }) => {
       `}
     >
       {children}
-      <BgPatterns />
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from ".";
 import Hero from "../Hero";
-import { mobileViewPort } from "../../utils/stories";
+import { mobileViewPort, tabletViewPort } from "../../utils/stories";
 
 export default {
   title: "Header",
@@ -16,10 +16,6 @@ export const MobileNavOpenView = () => <Header isNavOpen />;
 MobileNavOpenView.story = mobileViewPort;
 
 export const TabletView = () => <Header />;
-TabletView.story = {
-  parameters: {
-    viewport: { defaultViewport: "ipad" },
-  },
-};
+TabletView.story = tabletViewPort;
 
 export const DesktopView = () => <Header />;

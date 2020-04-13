@@ -1,7 +1,7 @@
 import React from "react";
 import HeroContent from ".";
 import Hero from "../Hero";
-import { mobileViewPort } from "../../utils/stories";
+import { mobileViewPort, tabletViewPort } from "../../utils/stories";
 
 export default {
   title: "HeroContent",
@@ -10,3 +10,6 @@ export default {
 
 export const MobileHeroContent = () => <HeroContent />;
 MobileHeroContent.story = mobileViewPort;
+
+export const TabletHeroContent = () => <HeroContent />;
+TabletHeroContent.story = tabletViewPort;
