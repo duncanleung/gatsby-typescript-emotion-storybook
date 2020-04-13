@@ -33,7 +33,7 @@ const createStyles = (
     /* Defaults (size - medium, color - primary, variant - default) */
     font-size: ${rem("18px")};
     line-height: ${rem("28px")};
-    min-height: 48px;
+    height: 48px;
     min-width: 153px;
     --border-size: 2px;
     font-weight: 600;
