@@ -13,3 +13,5 @@ MobileHeroContent.story = mobileViewPort;
 
 export const TabletHeroContent = () => <HeroContent />;
 TabletHeroContent.story = tabletViewPort;
+
+export const DesktopHeroContent = () => <HeroContent />;

@@ -5,6 +5,7 @@ import { Layout } from "~/components/Layout";
 import { SEO } from "~/components/SEO";
 import Header from "~/components/Header";
 import Hero from "../components/Hero";
+import HeroContent from "../components/HeroContent";
 
 const Index: React.FC<InjectedIntlProps> = ({ intl }) => {
   return (
@@ -12,6 +13,7 @@ const Index: React.FC<InjectedIntlProps> = ({ intl }) => {
       <SEO title="Hello" />
       <Hero>
         <Header />
+        <HeroContent />
       </Hero>
     </Layout>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
+import { ReactComponent as BgPatternOne } from "~/assets/images/bg-pattern-home-1.svg";
 import { ReactComponent as BgPatternTwo } from "~/assets/images/bg-pattern-home-2.svg";
 import { ReactComponent as BgPatternThree } from "~/assets/images/bg-pattern-home-3.svg";
 import { above } from "../../utils/styles";
@@ -13,6 +14,13 @@ const BgPatterns = () => (
         "md",
         css`
           margin-top: 156px;
+        `
+      )}
+
+      ${above(
+        "xxl",
+        css`
+          justify-self: end;
         `
       )}
     `}
@@ -33,6 +41,23 @@ const BgPatterns = () => (
         position: absolute;
         width: 200px;
         right: -100px;
+      `}
+    />
+    <BgPatternOne
+      css={css`
+        display: none;
+
+        ${above(
+          "xxl",
+          css`
+            display: block;
+            width: 200px;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            transform: translate(-50%, 250px);
+          `
+        )}
       `}
     />
   </div>
