@@ -41,6 +41,13 @@ const BgPatterns = () => (
         position: absolute;
         width: 200px;
         right: -100px;
+
+        ${above(
+          "xxl",
+          css`
+            bottom: 0px;
+          `
+        )}
       `}
     />
     <BgPatternOne

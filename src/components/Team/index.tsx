@@ -90,7 +90,7 @@ const Team = () => (
       )}
 
       ${above(
-        "lg",
+        "xxl",
         css`
           padding: 140px 165px;
           display: grid;
