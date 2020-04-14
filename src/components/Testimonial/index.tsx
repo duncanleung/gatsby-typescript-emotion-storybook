@@ -39,6 +39,7 @@ const Testimonial = () => (
           line-height: 25px;
           order: -1;
           z-index: 1;
+          margin: 0;
 
           svg {
             display: block;
@@ -54,6 +55,7 @@ const Testimonial = () => (
           font-size: 18px;
           line-height: 28px;
           color: ${theme.color.secondary.accent};
+          margin-bottom: 2px;
         }
 
         h4 {
