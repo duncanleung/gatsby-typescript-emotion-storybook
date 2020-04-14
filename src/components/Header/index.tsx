@@ -98,15 +98,17 @@ const Navigation: React.FC<{
           </ul>
         </nav>
         <Button>contact us</Button>
-        <BgPattern
-          css={css`
-            display: block;
-            position: absolute;
-            width: 200px;
-            bottom: 0;
-            right: -100px;
-          `}
-        />
+        {isNavOpen && (
+          <BgPattern
+            css={css`
+              display: block;
+              position: absolute;
+              width: 200px;
+              bottom: 0;
+              right: -100px;
+            `}
+          />
+        )}
       </div>
       {!isNavOpen ? (
         <Hamburger
