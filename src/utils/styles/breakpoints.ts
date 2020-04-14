@@ -8,10 +8,10 @@ export interface BreakpointsShape {
 
 const breakpoints: BreakpointsShape = {
   sm: 576,
-  md: 767,
+  md: 650,
   lg: 992,
   xl: 1200,
-  xxl: 1440,
+  xxl: 1340,
 };
 
 export default breakpoints;
