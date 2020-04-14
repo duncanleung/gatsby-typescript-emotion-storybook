@@ -19,6 +19,9 @@ const HeroContent = () => (
       ${above(
         "xxl",
         css`
+          max-width: max-content;
+          margin-left: auto;
+          margin-right: auto;
           text-align: left;
           /* margin: auto; */
           margin-top: 130px;

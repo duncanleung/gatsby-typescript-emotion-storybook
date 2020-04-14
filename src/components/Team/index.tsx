@@ -29,7 +29,7 @@ const Team = () => (
         margin-bottom: 56px;
       }
 
-      > div > div {
+      > div > div > div {
         display: grid;
         justify-items: center;
         text-align: center;
@@ -71,7 +71,7 @@ const Team = () => (
             width: 445px;
           }
 
-          > div > div {
+          > div > div > div {
             grid-template-columns: 72px 1fr;
             grid-column-gap: 23px;
             text-align: left;
@@ -94,12 +94,20 @@ const Team = () => (
         "xxl",
         css`
           padding: 140px 165px;
-          display: grid;
-          grid-template-columns: 445px 540px;
-          grid-column-gap: 125px;
-          > * {
-            margin-top: 58px;
+          > div {
+            display: grid;
+            grid-template-columns: 445px 540px;
+            grid-column-gap: 125px;
+            max-width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+
+            h2,
+            > div {
+              margin-top: 58px;
+            }
           }
+
           hr {
             position: absolute;
           }
@@ -113,37 +121,39 @@ const Team = () => (
       )}
     `}
   >
-    <hr />
-    <h2>Build & manage distributed teams like no one else.</h2>
     <div>
+      <hr />
+      <h2>Build & manage distributed teams like no one else.</h2>
       <div>
-        <IconPerson />
         <div>
-          <h4>Experienced Individuals</h4>
-          <p>
-            Our network is made up of highly experienced professionals who are
-            passionate about what they do.
-          </p>
+          <IconPerson />
+          <div>
+            <h4>Experienced Individuals</h4>
+            <p>
+              Our network is made up of highly experienced professionals who are
+              passionate about what they do.
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <IconCog />
         <div>
-          <h4>Easy to Implement</h4>
-          <p>
-            Our processes have been refined over years of implementation meaning
-            our teams always deliver.
-          </p>
+          <IconCog />
+          <div>
+            <h4>Easy to Implement</h4>
+            <p>
+              Our processes have been refined over years of implementation
+              meaning our teams always deliver.
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <IconChart />
         <div>
-          <h4>Enhanced Productivity</h4>
-          <p>
-            Our customized platform with in-built analytics helps you manage
-            your distributed teams.
-          </p>
+          <IconChart />
+          <div>
+            <h4>Enhanced Productivity</h4>
+            <p>
+              Our customized platform with in-built analytics helps you manage
+              your distributed teams.
+            </p>
+          </div>
         </div>
       </div>
     </div>
