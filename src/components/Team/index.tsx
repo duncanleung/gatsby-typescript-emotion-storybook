@@ -77,6 +77,7 @@ const Team = () => (
             text-align: left;
             justify-items: left;
             margin-bottom: 32px;
+            max-width: 575px;
 
             h4 {
               margin-bottom: 16px;
