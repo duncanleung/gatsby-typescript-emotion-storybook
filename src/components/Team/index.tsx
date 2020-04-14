@@ -4,6 +4,7 @@ import { Theme } from "../../styled";
 import { ReactComponent as IconCog } from "~/assets/images/icon-cog.svg";
 import { ReactComponent as IconPerson } from "~/assets/images/icon-person.svg";
 import { ReactComponent as IconChart } from "~/assets/images/icon-chart.svg";
+import { above } from "../../utils/styles";
 
 const Team = () => (
   <div
@@ -54,6 +55,46 @@ const Team = () => (
           opacity: 0.8;
         }
       }
+
+      ${above(
+        "md",
+        css`
+          padding: 100px 98px;
+          h2 {
+            margin-bottom: 64px;
+            font-size: 32px;
+            line-height: 32px;
+            width: 445px;
+          }
+
+          > div > div {
+            grid-template-columns: 72px 1fr;
+            grid-column-gap: 23px;
+            text-align: left;
+            justify-items: left;
+
+            p {
+              font-size: 15px;
+            }
+          }
+        `
+      )}
+
+      ${above(
+        "lg",
+        css`
+          padding: 140px 165px;
+
+          hr {
+            margin-bottom: 58px;
+          }
+
+          h2 {
+            font-size: 48px;
+            line-height: 48px;
+          }
+        `
+      )}
     `}
   >
     <hr />
