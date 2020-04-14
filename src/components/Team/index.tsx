@@ -35,6 +35,10 @@ const Team = () => (
         text-align: center;
         margin-bottom: 48px;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+
         svg {
           display: block;
           width: 72px;
@@ -72,6 +76,11 @@ const Team = () => (
             grid-column-gap: 23px;
             text-align: left;
             justify-items: left;
+            margin-bottom: 32px;
+
+            h4 {
+              margin-bottom: 16px;
+            }
 
             p {
               font-size: 15px;
@@ -84,12 +93,18 @@ const Team = () => (
         "lg",
         css`
           padding: 140px 165px;
-
+          display: grid;
+          grid-template-columns: 445px 540px;
+          grid-column-gap: 125px;
+          > * {
+            margin-top: 58px;
+          }
           hr {
-            margin-bottom: 58px;
+            position: absolute;
           }
 
           h2 {
+            margin-top: 58px;
             font-size: 48px;
             line-height: 48px;
           }
