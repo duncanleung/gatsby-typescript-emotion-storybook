@@ -30,6 +30,7 @@ const Testimonial = () => (
       > div > div {
         display: grid;
         grid-gap: 16px;
+        position: relative;
 
         &:not(:last-child) {
           margin-bottom: 84px;
@@ -83,7 +84,7 @@ const Testimonial = () => (
           padding: 100px 98px;
 
           h2 {
-            max-width: 573px;
+            width: 573px;
             margin-left: auto;
             margin-right: auto;
           }
@@ -94,6 +95,40 @@ const Testimonial = () => (
             line-height: 26px;
             margin-left: auto;
             margin-right: auto;
+          }
+        `
+      )}
+
+      ${above(
+        "xxl",
+        css`
+          padding: 140px 165px;
+
+          h2 {
+            font-size: 48px;
+            line-height: 48px;
+            width: 932px;
+            margin-bottom: 92px;
+          }
+
+          > div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 30px;
+            width: 1110px;
+            margin-left: auto;
+            margin-right: auto;
+
+            > div {
+              grid-row-gap: 24px;
+              margin: 0;
+              &:not(:last-child) {
+                margin: 0;
+              }
+              img {
+                margin-top: 8px;
+              }
+            }
           }
         `
       )}
@@ -128,6 +163,13 @@ const Testimonial = () => (
             "md",
             css`
               display: initial;
+            `
+          )}
+
+          ${above(
+            "xl",
+            css`
+              display: none;
             `
           )}
         `}
