@@ -16,6 +16,7 @@ const DefaultLayout: React.FC<Props> = ({
       <GlobalStyles />
       <div
         css={css`
+          position: relative;
           overflow: hidden;
         `}
         {...props}
