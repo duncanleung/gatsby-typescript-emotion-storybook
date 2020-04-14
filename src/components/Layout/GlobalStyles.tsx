@@ -3,6 +3,8 @@ import { Global, css } from "@emotion/core";
 import { normalize } from "polished";
 import livvicBold from "~/assets/fonts/Livvic-Bold.ttf";
 import livvicSemiBold from "~/assets/fonts/Livvic-SemiBold.ttf";
+import livvicMediumItalic from "~/assets/fonts/Livvic-MediumItalic.ttf";
+
 import { Theme } from "../../styled";
 // import { above, spacer } from "~/utils/styles";
 
@@ -19,6 +21,10 @@ const GlobalStyles: React.FC = () => {
         @font-face {
           font-family: "Levvic SemiBold";
           src: url(${livvicSemiBold}) format("truetype");
+        }
+        @font-face {
+          font-family: "Levvic Medium Italic";
+          src: url(${livvicMediumItalic}) format("truetype");
         }
 
         html,
