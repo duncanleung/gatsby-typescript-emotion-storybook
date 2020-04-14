@@ -5,6 +5,7 @@ import { rem } from "polished";
 import { ReactComponent as Logo } from "~/assets/images/logo.svg";
 import { ReactComponent as Hamburger } from "~/assets/images/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "~/assets/images/icon-close.svg";
+import { ReactComponent as BgPattern } from "~/assets/images/bg-pattern-about-1-mobile-nav-1.svg";
 import { Button } from "../Button";
 import { spacer, above } from "../../utils/styles";
 
@@ -97,6 +98,15 @@ const Navigation: React.FC<{
           </ul>
         </nav>
         <Button>contact us</Button>
+        <BgPattern
+          css={css`
+            display: block;
+            position: absolute;
+            width: 200px;
+            bottom: 0;
+            right: -100px;
+          `}
+        />
       </div>
       {!isNavOpen ? (
         <Hamburger
