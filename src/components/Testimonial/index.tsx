@@ -7,6 +7,7 @@ import { ReactComponent as IconQuotes } from "~/assets/images/icon-quotes.svg";
 import { ReactComponent as BgPatternOne } from "~/assets/images/bg-pattern-home-4-about-3.svg";
 import { ReactComponent as BgPatternTwo } from "~/assets/images/bg-pattern-home-5.svg";
 import { Theme } from "~/styled";
+import { above } from "../../utils/styles";
 
 const Testimonial = () => (
   <div
@@ -75,6 +76,27 @@ const Testimonial = () => (
           border: 2px solid #c4fffe;
         }
       }
+
+      ${above(
+        "md",
+        css`
+          padding: 100px 98px;
+
+          h2 {
+            max-width: 573px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          > div > div > p {
+            max-width: 573px;
+            font-size: 15px;
+            line-height: 26px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        `
+      )}
     `}
   >
     <BgPatternOne
@@ -98,6 +120,18 @@ const Testimonial = () => (
     />
     <h2>
       Delivering real results for top companies. Some of our{" "}
+      <br
+        css={css`
+          display: none;
+
+          ${above(
+            "md",
+            css`
+              display: initial;
+            `
+          )}
+        `}
+      />
       <span>success stories.</span>
     </h2>
     <div>
