@@ -10,6 +10,17 @@ const Team = () => (
     css={(theme: Theme) => css`
       background: ${theme.color.secondary.darker};
       padding: 64px 24px;
+
+      hr {
+        display: block;
+        width: 50px;
+        margin: 0;
+        height: 4px;
+        background: ${theme.color.primary.accent};
+        border: 0;
+        margin-bottom: 36px;
+      }
+
       h2 {
         width: 240px;
         font-size: 32px;
@@ -45,6 +56,7 @@ const Team = () => (
       }
     `}
   >
+    <hr />
     <h2>Build & manage distributed teams like no one else.</h2>
     <div>
       <div>
