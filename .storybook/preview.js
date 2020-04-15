@@ -30,9 +30,20 @@ window.___navigate = (pathname) => {
 // Storybook Addons
 // ============================================
 // TODO: Add our breakpoints to the list of viewport options
+
+const customViewports = {
+  desktop: {
+    name: "Desktop",
+    styles: {
+      width: "1366px",
+      height: "1024px",
+    },
+  },
+};
+
 addParameters({
   viewport: {
-    viewports: INITIAL_VIEWPORTS,
+    viewports: { ...INITIAL_VIEWPORTS, ...customViewports },
     defaultViewport: "responsive",
   },
   options: {
