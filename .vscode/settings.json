@@ -59,5 +59,8 @@
   },
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
-  "editor.gotoLocation.multipleTypeDefinitions": "goto"
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "cSpell.words": [
+    "Pinterest"
+  ]
 }
