@@ -22,7 +22,7 @@ const Footer = () => (
       )}
 
       ${above(
-        "xxl",
+        "lg",
         css`
           padding: 48px 165px;
         `
