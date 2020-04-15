@@ -5,6 +5,7 @@ import { ReactComponent as TwitterIcon } from "~/assets/images/icon-twitter.svg"
 import { ReactComponent as FBIcon } from "~/assets/images/icon-facebook.svg";
 import { ReactComponent as PinterestIcon } from "~/assets/images/icon-pinterest.svg";
 import { Theme } from "~/styled";
+import { above } from "~/utils/styles";
 
 const Footer = () => (
   <footer
@@ -12,6 +13,13 @@ const Footer = () => (
       padding: 66px 24px 64px;
       background: ${theme.color.secondary.darkest};
       text-align: center;
+
+      ${above(
+        "md",
+        css`
+          padding: 56px 40px;
+        `
+      )}
     `}
   >
     <div
@@ -48,6 +56,24 @@ const Footer = () => (
             }
           }
         }
+
+        ${above(
+          "md",
+          css`
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100px 25px;
+            grid-row-gap: 34px;
+
+            > div:first-child {
+              justify-self: left;
+            }
+            > div:nth-child(2) {
+              justify-self: right;
+              text-align: right;
+            }
+          `
+        )}
       `}
     >
       <div>
@@ -75,7 +101,23 @@ const Footer = () => (
           Call Us : 949-833-7432
         </address>
       </div>
-      <div>
+      <div
+        css={css`
+          ${above(
+            "md",
+            css`
+              display: flex;
+              grid-column: 1 / -1;
+              justify-content: space-between;
+
+              div,
+              small {
+                margin: 0;
+              }
+            `
+          )}
+        `}
+      >
         <div
           css={css`
             display: grid;
