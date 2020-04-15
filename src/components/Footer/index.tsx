@@ -20,6 +20,13 @@ const Footer = () => (
           padding: 56px 40px;
         `
       )}
+
+      ${above(
+        "xxl",
+        css`
+          padding: 48px 165px;
+        `
+      )}
     `}
   >
     <div
@@ -74,6 +81,32 @@ const Footer = () => (
             }
           `
         )}
+
+        ${above(
+          "xxl",
+          css`
+            grid-template-columns: 160px 1fr 255px;
+            grid-column-gap: 125px;
+            grid-template-rows: 1fr;
+            text-align: left;
+
+            > div:nth-child(2) {
+              justify-self: left;
+              text-align: left;
+            }
+            ul {
+              justify-content: left;
+            }
+            ul > li {
+              font-size: 18px;
+              line-height: 28px;
+            }
+
+            address {
+              margin-bottom: 0;
+            }
+          `
+        )}
       `}
     >
       <div>
@@ -81,6 +114,12 @@ const Footer = () => (
           css={css`
             height: 24px;
             margin-bottom: 24px;
+            ${above(
+              "xxl",
+              css`
+                height: 40px;
+              `
+            )}
           `}
         />
         <div>
@@ -113,6 +152,20 @@ const Footer = () => (
               div,
               small {
                 margin: 0;
+              }
+            `
+          )}
+
+          ${above(
+            "xxl",
+            css`
+              display: grid;
+              grid-column: 3 / -1;
+              height: 100%;
+              align-content: space-between;
+              justify-content: right;
+              > div {
+                justify-content: right;
               }
             `
           )}
