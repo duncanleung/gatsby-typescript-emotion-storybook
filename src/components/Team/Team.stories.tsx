@@ -1,21 +1,14 @@
 import React from "react";
-import { mobileViewPort, tabletViewPort } from "../../utils/stories";
+import {
+  mobileViewPort,
+  tabletViewPort,
+  desktopViewPort,
+} from "../../utils/stories";
 import Team from ".";
-import Hero from "../Hero";
-import HeroContent from "../HeroContent";
 
 export default {
   title: "Team",
-  decorators: [
-    (story: () => React.ComponentType) => (
-      <div>
-        <Hero>
-          <HeroContent />
-        </Hero>
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [(story: () => React.ComponentType) => <div>{story()}</div>],
 };
 
 export const MobileView = () => <Team />;
@@ -26,3 +19,4 @@ export const TabletView = () => <Team />;
 TabletView.story = tabletViewPort;
 
 export const DesktopView = () => <Team />;
+DesktopView.story = desktopViewPort;

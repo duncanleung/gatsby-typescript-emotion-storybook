@@ -8,6 +8,7 @@ import { ReactComponent as CloseIcon } from "~/assets/images/icon-close.svg";
 import { ReactComponent as BgPattern } from "~/assets/images/bg-pattern-about-1-mobile-nav-1.svg";
 import { Button } from "../Button";
 import { spacer, above } from "../../utils/styles";
+import shared from "../../utils/styles/shared";
 
 const Navigation: React.FC<{
   isNavOpen?: boolean;
@@ -153,10 +154,14 @@ const Header: React.FC<{
 }> = ({ isNavOpen, onOpenNav, onCloseNav }) => {
   return (
     <header
-      css={css`
-        display: flex;
-        align-items: center;
-      `}
+      css={(theme: Theme) => [
+        shared.componentContainerStyles,
+        css`
+          display: flex;
+          align-items: center;
+          background-color: ${theme.color.primary.dark};
+        `,
+      ]}
     >
       <Logo
         css={css`

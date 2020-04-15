@@ -1,17 +1,21 @@
 import React from "react";
 import HeroContent from ".";
-import Hero from "../Hero";
-import { mobileViewPort, tabletViewPort } from "../../utils/stories";
+import {
+  mobileViewPort,
+  tabletViewPort,
+  desktopViewPort,
+} from "../../utils/stories";
 
 export default {
   title: "HeroContent",
-  decorators: [(story: () => React.ComponentType) => <Hero>{story()}</Hero>],
+  decorators: [(story: () => React.ComponentType) => <div>{story()}</div>],
 };
 
-export const MobileHeroContent = () => <HeroContent />;
-MobileHeroContent.story = mobileViewPort;
+export const MobileView = () => <HeroContent />;
+MobileView.story = mobileViewPort;
 
-export const TabletHeroContent = () => <HeroContent />;
-TabletHeroContent.story = tabletViewPort;
+export const TabletView = () => <HeroContent />;
+TabletView.story = tabletViewPort;
 
-export const DesktopHeroContent = () => <HeroContent />;
+export const DesktopView = () => <HeroContent />;
+DesktopView.story = desktopViewPort;

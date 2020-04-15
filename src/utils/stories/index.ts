@@ -9,3 +9,9 @@ export const tabletViewPort = {
     viewport: { defaultViewport: "ipad" },
   },
 };
+
+export const desktopViewPort = {
+  parameters: {
+    viewport: { defaultViewport: "ipadpro" },
+  },
+};

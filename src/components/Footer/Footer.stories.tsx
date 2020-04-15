@@ -1,5 +1,9 @@
 import React from "react";
-import { mobileViewPort, tabletViewPort } from "../../utils/stories";
+import {
+  mobileViewPort,
+  tabletViewPort,
+  desktopViewPort,
+} from "../../utils/stories";
 import Footer from ".";
 
 export default {
@@ -7,10 +11,11 @@ export default {
   decorators: [(story: () => React.ComponentType) => <div>{story()}</div>],
 };
 
-export const MobileFooter = () => <Footer />;
-MobileFooter.story = mobileViewPort;
+export const MobileView = () => <Footer />;
+MobileView.story = mobileViewPort;
 
-export const TabletFooter = () => <Footer />;
-TabletFooter.story = tabletViewPort;
+export const TabletView = () => <Footer />;
+TabletView.story = tabletViewPort;
 
-export const DesktopFooter = () => <Footer />;
+export const DesktopView = () => <Footer />;
+DesktopView.story = desktopViewPort;

@@ -3,6 +3,8 @@ import React from "react";
 import { css } from "@emotion/core";
 
 import GlobalStyles from "./GlobalStyles";
+import Header from "../Header";
+import Footer from "../Footer";
 
 type Props = {};
 
@@ -12,10 +14,12 @@ const DefaultLayout: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <>
+    <div>
       <GlobalStyles />
-      <div {...props}>{children}</div>
-    </>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
 };
 

@@ -1,5 +1,9 @@
 import React from "react";
-import { mobileViewPort, tabletViewPort } from "../../utils/stories";
+import {
+  mobileViewPort,
+  tabletViewPort,
+  desktopViewPort,
+} from "../../utils/stories";
 import Testimonial from ".";
 
 export default {
@@ -7,10 +11,11 @@ export default {
   decorators: [(story: () => React.ComponentType) => <div>{story()}</div>],
 };
 
-export const MobileTestimonial = () => <Testimonial />;
-MobileTestimonial.story = mobileViewPort;
+export const MobileView = () => <Testimonial />;
+MobileView.story = mobileViewPort;
 
-export const TabletTestimonial = () => <Testimonial />;
-TabletTestimonial.story = tabletViewPort;
+export const TabletView = () => <Testimonial />;
+TabletView.story = tabletViewPort;
 
-export const DesktopTestimonial = () => <Testimonial />;
+export const DesktopView = () => <Testimonial />;
+DesktopView.story = desktopViewPort;
