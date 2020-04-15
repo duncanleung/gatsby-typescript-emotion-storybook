@@ -38,7 +38,7 @@ const componentContentStyles = css`
   )}
 
   ${above(
-    "md",
+    "xxl",
     css`
       --content-width: ${rem("1110px")};
     `

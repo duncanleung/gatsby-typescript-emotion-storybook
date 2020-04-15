@@ -157,22 +157,53 @@ const Header: React.FC<{
       css={(theme: Theme) => [
         shared.componentContainerStyles,
         css`
-          display: flex;
-          align-items: center;
           background-color: ${theme.color.primary.dark};
+          padding-top: ${rem("48px")};
+          > div {
+            display: flex;
+            align-items: center;
+          }
+
+          ${above(
+            "md",
+            css`
+              padding-top: ${rem("64px")};
+            `
+          )}
         `,
       ]}
     >
-      <Logo
-        css={css`
-          height: 32px;
-        `}
-      />
-      <Navigation
-        isNavOpen={isNavOpen}
-        onOpenNav={onOpenNav}
-        onCloseNav={onCloseNav}
-      />
+      <div
+        css={[
+          shared.componentContentStyles,
+          css`
+            ${above(
+              "md",
+              css`
+                max-width: 100%;
+              `
+            )}
+
+            ${above(
+              "xxl",
+              css`
+                max-width: var(--content-width);
+              `
+            )}
+          `,
+        ]}
+      >
+        <Logo
+          css={css`
+            height: 32px;
+          `}
+        />
+        <Navigation
+          isNavOpen={isNavOpen}
+          onOpenNav={onOpenNav}
+          onCloseNav={onCloseNav}
+        />
+      </div>
     </header>
   );
 };

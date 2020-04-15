@@ -30,6 +30,14 @@ const bgPatternTwoStyle = css`
   bottom: 0;
   max-width: 355px;
   transform: translateX(-50%);
+
+  ${above(
+    "xxl",
+    css`
+      left: unset;
+      right: 0;
+    `
+  )}
 `;
 
 const baseStyles = (theme: Theme) => css`
