@@ -115,7 +115,7 @@ const Testimonial = () => (
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 30px;
-            width: 1110px;
+            max-width: 1110px;
             margin-left: auto;
             margin-right: auto;
 
