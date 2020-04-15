@@ -9,6 +9,7 @@ import HeroContent from "~/components/HeroContent";
 import Team from "~/components/Team";
 import Testimonial from "../components/Testimonial";
 import ContactUs from "../components/ContactUs";
+import Footer from "../components/Footer";
 
 const Index: React.FC<InjectedIntlProps> = () => {
   return (
@@ -28,6 +29,7 @@ const Index: React.FC<InjectedIntlProps> = () => {
       </div>
       <Testimonial />
       <ContactUs />
+      <Footer />
     </Layout>
   );
 };
