@@ -4,7 +4,6 @@ import { above } from ".";
 
 const componentContainerStyles = css`
   --side-padding: ${rem("24px")};
-
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
 
