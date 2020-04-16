@@ -4,7 +4,7 @@ import { Theme } from "@theme/styled";
 import { rem } from "polished";
 import { ReactComponent as Logo } from "~/assets/images/logo.svg";
 
-import { above } from "../../utils/styles";
+import { above, between } from "../../utils/styles";
 import shared from "../../utils/styles/shared";
 import Navigation from "./Navigation";
 
@@ -17,9 +17,11 @@ function headerStyles(theme: Theme) {
       align-items: center;
     }
 
-    ${above(
+    ${between(
       "md",
+      "xxl",
       css`
+        --side-padding: ${rem("40px")};
         padding-top: ${rem("64px")};
       `
     )}

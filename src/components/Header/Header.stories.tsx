@@ -1,6 +1,10 @@
 import React from "react";
 import Header from ".";
-import { mobileViewPort, tabletViewPort } from "../../utils/stories";
+import {
+  mobileViewPort,
+  tabletViewPort,
+  desktopViewPort,
+} from "../../utils/stories";
 
 export default {
   title: "Header",
@@ -17,3 +21,4 @@ export const TabletView = () => <Header />;
 TabletView.story = tabletViewPort;
 
 export const DesktopView = () => <Header />;
+DesktopView.story = desktopViewPort;
