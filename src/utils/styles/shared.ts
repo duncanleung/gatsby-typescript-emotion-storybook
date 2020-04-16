@@ -10,7 +10,7 @@ const componentContainerStyles = css`
   ${above(
     "md",
     css`
-      --side-padding: ${rem("40px")};
+      --side-padding: ${rem("97.5px")};
     `
   )}
 
