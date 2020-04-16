@@ -20,3 +20,15 @@ export const above = (
     ${className};
   }
 `;
+
+export const between = (
+  from: keyof BreakpointsShape,
+  to: keyof BreakpointsShape,
+  className: SerializedStyles
+) => css`
+  @media (min-width: ${getBreakpoint(from)}px) and (max-width: ${getBreakpoint(
+      to
+    )}px) {
+    ${className}
+  }
+`;

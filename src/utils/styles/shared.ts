@@ -4,14 +4,13 @@ import { above } from ".";
 
 const componentContainerStyles = css`
   --side-padding: ${rem("24px")};
-
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
 
   ${above(
     "md",
     css`
-      --side-padding: ${rem("40px")};
+      --side-padding: ${rem("97.5px")};
     `
   )}
 
