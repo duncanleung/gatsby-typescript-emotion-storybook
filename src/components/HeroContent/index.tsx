@@ -97,7 +97,7 @@ const desktopStyles = () => css`
 
       > div {
         display: grid;
-        grid-template-columns: 635px 445px;
+        grid-template-columns: 635px 1fr;
         grid-column-gap: 30px;
         align-items: flex-end;
         text-align: left;
