@@ -84,7 +84,6 @@ const contentDivStyles = css`
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 100px 25px;
       grid-row-gap: 34px;
-      max-width: 100%;
       > div:first-child {
         justify-self: left;
       }
@@ -92,6 +91,14 @@ const contentDivStyles = css`
         justify-self: right;
         text-align: right;
       }
+    `
+  )}
+
+  ${between(
+    "md",
+    "xxl",
+    css`
+      max-width: 100%;
     `
   )}
 
