@@ -7,15 +7,17 @@ declare module "*.svg" {
 
 declare module "*.jpg" {
   const jpgContent: string;
-  export { jpgContent };
+  export default jpgContent;
 }
 
 declare module "*.png" {
   const pngContent: string;
-  export { pngContent };
+  export default pngContent;
 }
 
 declare module "*.json" {
   const jsonContent: string;
-  export { jsonContent };
+  export default jsonContent;
 }
+
+declare module "*.ttf" {}
