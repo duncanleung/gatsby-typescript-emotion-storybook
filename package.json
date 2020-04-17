@@ -38,7 +38,9 @@
     "test:watch": "jest --watch",
     "format": "yarn lint:js --fix && yarn lint:ts --fix",
     "storybook": "start-storybook  -p 9001",
-    "storybook:build": "build-storybook -c .storybook -o .out"
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "snapshot": "build-storybook && percy-storybook",
+    "test:snapshot":"export PERCY_BRANCH=local; yarn snapshot"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
