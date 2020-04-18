@@ -74,3 +74,8 @@ yarn-error.log
 
 # Ensure automated processes do not mix package manager artifacts
 package-lock.json
+
+# Local Netlify folder
+.netlify
+
+storybook-static/

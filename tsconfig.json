@@ -17,10 +17,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "downlevelIteration": true,
     "baseUrl": "./",
     "paths": {
       "~/*": ["src/*"],
+      "~/assets/fonts": ["src/assets/fonts"],
+
       "@theme/styled": ["src/styled"]
     }
   },

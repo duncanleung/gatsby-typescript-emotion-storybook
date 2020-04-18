@@ -1,18 +1,18 @@
-import React from 'react';
-import { IntlContextProvider } from 'gatsby-plugin-intl/intl-context';
+import React from "react";
+import { IntlContextProvider } from "gatsby-plugin-intl/intl-context";
 
-import { locales, messages } from '../preview';
+import { locales, messages } from "../preview";
 
 const intlConfig = {
-  language: 'en-us',
+  language: "en-us",
   languages: locales,
   messages: messages,
-  originalPath: '/',
+  originalPath: "/",
   redirect: true,
   routed: true,
 };
 
-const GatsbyIntlProvider = storyFn => (
+const GatsbyIntlProvider = (storyFn) => (
   <IntlContextProvider value={intlConfig}>{storyFn()}</IntlContextProvider>
 );
 

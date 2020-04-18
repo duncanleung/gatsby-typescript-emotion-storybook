@@ -1,15 +1,15 @@
-import { rem, em } from 'polished';
-import theme from '~/theme';
+import { rem, em } from "polished";
+import theme from "~/theme";
 
-type Unit = 'rem' | 'em' | 'px';
+type Unit = "rem" | "em" | "px";
 
-export default function spacer(multiplier = 1, unit: Unit = 'rem') {
+export default function spacer(multiplier = 1, unit: Unit = "rem") {
   const spacerValue = theme.spacing.unit * multiplier;
 
-  if (unit === 'px') {
+  if (unit === "px") {
     return `${spacerValue}px`;
   }
-  if (unit === 'em') {
+  if (unit === "em") {
     return em(`${spacerValue}px`);
   }
 

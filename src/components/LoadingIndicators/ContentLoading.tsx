@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import { rgba } from 'polished';
+import React from "react";
+import { rgba } from "polished";
 
-import styled from '@theme/styled';
-import { spacer } from '~/utils/styles';
+import styled from "@theme/styled";
+import { spacer } from "~/utils/styles";
 
 const Wrapper = styled.div`
   height: 300px;
@@ -15,9 +15,9 @@ const Wrapper = styled.div`
     */
   background: linear-gradient(
         90deg,
-        ${rgba('#ffffff', 0)} 0,
-        ${rgba('#ffffff', 0.8)} 50%,
-        ${rgba('#ffffff', 0)} 100%
+        ${rgba("#ffffff", 0)} 0,
+        ${rgba("#ffffff", 0.8)} 50%,
+        ${rgba("#ffffff", 0)} 100%
       ) -100% 0,
     linear-gradient(#f3f1f0 12px, transparent) 0 0,
     linear-gradient(#f3f1f0 12px, transparent) 0 40px,
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
  * This component provided a general skeleton UI loading experience that can be used in
  * multiple component types to indicate asynchronous content loading.
  */
-const ContentLoading: React.FC = props => {
+const ContentLoading: React.FC = (props) => {
   return <Wrapper {...props} />;
 };
 

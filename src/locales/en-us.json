@@ -1,5 +1,19 @@
 {
-  "homepage.title": "Gatsby + TypeScript + Emotion + Storybook Starter",
-  "greeting": "Welcome to the Gatsby + TypeScript + Emotion + Storybook Starter.",
-  "auth.login": "Login"
+  "home": "home",
+  "about": "about",
+  "contact_us": "contact us",
+  "find_the_best_talent": "Find the best talent",
+  "find_the_right_peopole": "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.",
+  "build_and_manage": "Build & manage distributed teams like no one else.",
+  "experienced_individuals": "Experienced Individuals",
+  "our_network_is_made_up_of": "Our network is made up of highly experienced professionals who are passionate about what they do.",
+  "easy_to_implement": "Easy to Implement",
+  "our_processes_have_been": "Our processes have been refined over years of implementation meaning our teams always deliver.",
+  "enhanced_productivity": "Enhanced Productivity",
+  "our_customized_platform": "Our customized platform with in-built analytics helps you manage your distributed teams.",
+  "deliverying_real_results": "Delivering real results for top companies. Some of our success stories.",
+  "the_team_perfectly": "The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.",
+  "we_needed_to_automate": "We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!",
+  "amazing_our_team": "Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.",
+  "ready_to_get_started": "Ready to get started?"
 }

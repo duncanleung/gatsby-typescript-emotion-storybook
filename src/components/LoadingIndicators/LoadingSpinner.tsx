@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import { em } from 'polished';
+import React from "react";
+import { em } from "polished";
 
-import styled from '@theme/styled';
-import { ReactComponent as SpinnerIcon } from '~/icons/loading-spinner.svg';
+import styled from "@theme/styled";
+import { ReactComponent as SpinnerIcon } from "~/icons/loading-spinner.svg";
 
 type Props = {
   /** A size value to apply to the height and width of the spinner, Example: '18'. Will be set as pixel units */
@@ -45,7 +45,7 @@ const Spinner = styled(SpinnerIcon)`
 /**
  * A general use loading spinner. Can be used in multiple component types.
  */
-const LoadingSpinner: React.FC<Props> = ({ size = '18', ...props }) => {
+const LoadingSpinner: React.FC<Props> = ({ size = "18", ...props }) => {
   return (
     <Wrapper size={`${size}px`} {...props}>
       <Spinner />

@@ -1,21 +1,23 @@
-declare module '*.svg' {
-  import React = require('react');
+declare module "*.svg" {
+  import React = require("react");
   export const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>;
   const src: string;
   export default src;
 }
 
-declare module '*.jpg' {
+declare module "*.jpg" {
   const jpgContent: string;
-  export { jpgContent };
+  export default jpgContent;
 }
 
-declare module '*.png' {
+declare module "*.png" {
   const pngContent: string;
-  export { pngContent };
+  export default pngContent;
 }
 
-declare module '*.json' {
+declare module "*.json" {
   const jsonContent: string;
-  export { jsonContent };
+  export default jsonContent;
 }
+
+declare module "*.ttf" {}

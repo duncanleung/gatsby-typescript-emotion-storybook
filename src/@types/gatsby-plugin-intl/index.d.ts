@@ -1,7 +1,7 @@
-declare module 'gatsby-plugin-intl' {
+declare module "gatsby-plugin-intl" {
   /* eslint-disable-next-line import/no-extraneous-dependencies */
-  import ReactIntl from 'react-intl';
-  import Gatsby from 'gatsby';
+  import ReactIntl from "react-intl";
+  import Gatsby from "gatsby";
 
   // Type mapping from react-intl
   export import injectIntl = ReactIntl.injectIntl;

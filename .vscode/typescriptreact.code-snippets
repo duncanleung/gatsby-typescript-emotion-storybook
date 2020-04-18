@@ -1,0 +1,58 @@
+{
+  "React Function Component with Emotion": {
+    "prefix": "erfc",
+    "body": [
+      "import React from 'react';",
+      "import styled from '@emotion/styled';",
+      "",
+      "interface ${TM_FILENAME_BASE}Props extends React.AllHTMLAttributes<any> {",
+      "$1",
+      "}",
+      "",
+      "const $TM_FILENAME_BASE: React.FC<${TM_FILENAME_BASE}Props> = ({...props}) => {",
+      "\t\treturn (<$3 {...props}>\n\t\t\t$4\n\t</$3>);",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE;"
+    ]
+  },
+  "Typescript React PureComponent": {
+    "prefix": "rpc",
+    "body": [
+      "import React, {PureComponent} from 'react'",
+      "",
+      "export class $1 extends PureComponent {",
+      "\trender() {",
+      "\t\treturn ($2);",
+      "}}"
+    ],
+    "description": "Typescript React PureComponent"
+  },
+  "Typescript React Function Component": {
+    "prefix": "rh",
+    "body": [
+      "import React from 'react'",
+      "",
+      "interface ${TM_FILENAME_BASE}Props extends React.AllHTMLAttributes<any> {",
+      "$1",
+      "}",
+      "",
+      "const $TM_FILENAME_BASE: React.FC<${TM_FILENAME_BASE}Props> = ({...props}) => {",
+      "\t\treturn (<$3 {...props}>\n\t\t\t$4\n\t</$3>);",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE"
+    ],
+    "description": "Typescript React Function Component"
+  },
+  "React Native StyleSheet": {
+    "prefix": "rnss",
+    "body": [
+      "import {StyleSheet} from 'react-native'",
+      "const styles = StyleSheet.create({",
+      "",
+      "});"
+    ],
+    "description": "React Native StyleSheet"
+  }
+}

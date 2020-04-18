@@ -1,1 +1,1 @@
-export { default as isBrowser } from './isBrowser';
+export { default as isBrowser } from "./isBrowser";

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const gatsby = jest.requireActual('gatsby');
+const gatsby = jest.requireActual("gatsby");
 
 // Mocks graphql() function, Link component, and StaticQuery component
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
       to,
       ...rest
     }) =>
-      React.createElement('a', {
+      React.createElement("a", {
         ...rest,
         href: to,
       })

@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require("path");
 
-require('dotenv').config({
-  path: '.env',
+require("dotenv").config({
+  path: ".env",
 });
 
 exports.onCreateWebpackConfig = function addPathMapping({
@@ -12,13 +12,13 @@ exports.onCreateWebpackConfig = function addPathMapping({
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, 'src'),
+        "~": path.resolve(__dirname, "src"),
       },
     },
   });
 
   // Attempt to improve webpack vender code splitting
-  if (stage === 'build-javascript') {
+  if (stage === "build-javascript") {
     const config = getConfig();
 
     config.optimization.splitChunks.cacheGroups = {
@@ -26,7 +26,7 @@ exports.onCreateWebpackConfig = function addPathMapping({
       vendors: {
         test: /[\\/]node_modules[\\/]/,
         enforce: true,
-        chunks: 'all',
+        chunks: "all",
         priority: 1,
       },
     };

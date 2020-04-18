@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const gatsbyPluginIntl = jest.requireActual('gatsby-plugin-intl');
+const gatsbyPluginIntl = jest.requireActual("gatsby-plugin-intl");
 
 module.exports = {
   ...gatsbyPluginIntl,
@@ -19,7 +19,7 @@ module.exports = {
         language,
         ...rest
       }) =>
-        React.createElement('a', {
+        React.createElement("a", {
           ...rest,
           href: to,
         })

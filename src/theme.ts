@@ -1,38 +1,43 @@
-import { Theme } from '@theme/styled';
+import { Theme } from "@theme/styled";
+
+const themeColors = {
+  midnightGreen: "#014E56",
+  lightCoral: "#F67E7E",
+  white: "#FFFFFF",
+  raptureBlue: "#79C8C7",
+  policeBlue: "#2C6269",
+  deepJungleGreen: "#004047",
+  veryDark: "#002529",
+  sacramentoGreen: "#012F34",
+  darkGreen: "#002529",
+};
 
 const theme: Theme = {
   color: {
-    primary: '#ffcc00',
-    secondary: '#008489',
-    tertiary: '#f39b84',
-    gray: {
-      lightest: '#faf8f5',
-      light: '#e2dedc',
-      medium: '#aaa5a3',
-      dark: '#75706b',
-      darkest: '#463b36',
+    primary: {
+      dark: themeColors.midnightGreen,
+      accent: themeColors.lightCoral,
+      light: themeColors.white,
     },
-    status: {
-      error: {
-        light: '#ffeeea',
-        medium: '#ed6c4a',
-        dark: '#ba3816',
-      },
+    secondary: {
+      accent: themeColors.raptureBlue,
+      light: themeColors.policeBlue,
+      dark: themeColors.deepJungleGreen,
+      darker: themeColors.sacramentoGreen,
+      darkest: themeColors.darkGreen,
     },
     text: {
-      heading: '#463b36',
-      body: '#75706b',
+      light: themeColors.white,
+      dark: themeColors.darkGreen,
+      accent: themeColors.lightCoral,
     },
-    disabled: '#aaa5a3',
   },
   spacing: {
     unit: 8,
   },
   shape: {
     borderRadius: {
-      small: 4,
-      medium: 6,
-      large: 32,
+      button: 24,
     },
   },
 };

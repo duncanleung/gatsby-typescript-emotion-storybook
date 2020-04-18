@@ -14,7 +14,7 @@ plugins:
   - minifyStyles: true
   - moveElemesAttrsToGroup: true
   - removeAttrs: true
-    attrs: 'fill-rule'
+    attrs: "fill-rule"
   - removeComments: true
   - removeDesc: true
     removeAny: true

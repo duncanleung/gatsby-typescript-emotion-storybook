@@ -1,3 +1,5 @@
-import supportedLanguages from './supportedLanguages';
+// @ts-nocheck
+
+import supportedLanguages from "./supportedLanguages";
 
 export { supportedLanguages };
