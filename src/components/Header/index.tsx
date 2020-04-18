@@ -12,6 +12,8 @@ function headerStyles(theme: Theme) {
   return css`
     background-color: ${theme.color.primary.dark};
     padding-top: ${rem("48px")};
+    padding-bottom: ${rem("48px")};
+
     > div {
       display: flex;
       align-items: center;

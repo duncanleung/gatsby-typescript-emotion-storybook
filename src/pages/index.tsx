@@ -2,19 +2,21 @@ import React from "react";
 import { injectIntl, InjectedIntlProps } from "gatsby-plugin-intl";
 import { Layout } from "~/components/Layout";
 import { SEO } from "~/components/SEO";
-import HeroContent from "~/components/HeroContent";
-import Team from "~/components/Team";
-import Testimonial from "../components/Testimonial";
-import ContactUs from "../components/ContactUs";
+import { css } from "@emotion/core";
+import { Theme } from "../styled";
 
 const Index: React.FC<InjectedIntlProps> = () => {
   return (
     <Layout>
       <SEO title="Hello" />
-      <HeroContent />
-      <Team />
-      <Testimonial />
-      <ContactUs />
+      <div
+        css={(theme: Theme) => css`
+          padding: 150px;
+          background: ${theme.color.secondary.accent};
+        `}
+      >
+        <h1>Hello, World</h1>
+      </div>
     </Layout>
   );
 };

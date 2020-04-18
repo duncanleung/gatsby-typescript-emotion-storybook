@@ -143,7 +143,6 @@ const Navigation: React.FC<{
             <li>about</li>
           </ul>
         </nav>
-        <Button>contact us</Button>
         {isNavOpen && <BgPattern css={navBgPatternStyles} />}
       </div>
       {!isNavOpen ? (
