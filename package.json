@@ -69,6 +69,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.7",
     "@storybook/addon-actions": "^5.3.13",
     "@storybook/addon-info": "^5.3.13",
     "@storybook/addon-storyshots": "^5.3.18",
