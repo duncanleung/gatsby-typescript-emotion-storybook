@@ -120,7 +120,7 @@ There are few dependencies to install on your local machine to begin.
 
 5)  **Run Tests**
 
-    Jest and React Testing Libary provide test running and rendering.
+    Jest and React Testing Library provide test running and rendering.
 
     Start running Jest
 
