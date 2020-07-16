@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/setup-test-env.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/test-utils/setup-test-env.ts"
   },
   "scripts": {
     "build": "gatsby build",
