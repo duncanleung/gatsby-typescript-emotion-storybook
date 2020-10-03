@@ -79,7 +79,7 @@
     "@types/react-intl": "2.3.18",
     "@types/storybook__react": "^5.2.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
-    "@typescript-eslint/parser": "^2.20.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
